@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --text-light: #e0e0e0;
+            --purple-light: #9370db;
+            --purple-dark: #6a0dad;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 0;
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            margin: 20px auto 0;
+            opacity: 0;
+        }
+
+        @keyframes typeAndDelete {
+            0%, 100% { width: 0; opacity: 1; }
+            40%, 60% { width: 3ch; opacity: 1; }
+            70%, 80% {
+                width: 3ch;
+                opacity: 1;
+                background-color: var(--purple-dark);
+                color: var(--bg-dark);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>404</h2>
+    <h1>Congrats you found... Nothing!</h1>
+
+    <script>
+        const h2 = document.querySelector('h2');
+        const h1 = document.querySelector('h1');
+
+        function animateH2() {
+            h2.style.animation = 'typeAndDelete 2s ease-in-out forwards';
+            setTimeout(() => {
+                h2.style.animation = 'none';
+                setTimeout(animateH2, 50);
+            }, 2000);
+        }
+
+        function animateH1() {
+            h1.style.animation = 'fadeIn 1s ease-in-out forwards';
+        }
+
+        animateH2();
+        setTimeout(animateH1, 2500);
+    </script>
+</body>
+</html>

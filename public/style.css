@@ -1,0 +1,136 @@
+:root {
+    --bg-dark: #121212;
+    --bg-input: #1e1e1e;
+    --text-light: #e0e0e0;
+    --purple-light: #9370db;
+    --purple-dark: #6a0dad;
+    --button-bg: #575757;
+    --button-hover: #737373;
+}
+
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.iframeWindow {
+    position: fixed;
+    width: calc(100% - 40px);
+    height: calc(90vh - 20px);
+    border: none;
+    left: 20px;
+    bottom: 20px;
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#urlInput {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: calc(80% - 20px);
+    height: 5vh;
+    padding: 0 1em;
+    border: 1px solid #333;
+    outline: none;
+    color: var(--text-light);
+    background-color: var(--bg-input);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+#urlInput:focus {
+    background-color: #2c2c2c;
+    border-color: var(--purple-dark);
+    box-shadow: 0 0 10px rgba(240, 248, 255, 0.5);
+}
+
+#searchButton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 10%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    color: var(--text-light);
+    background-color: var(--button-bg);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#searchButton:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+#switcher {
+    position: fixed;
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+    background-color: var(--bg-input);
+    color: var(--text-light);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#switcher:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #urlInput, #searchButton {
+        font-size: 16px;
+    }
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: var(--bg-input);
+    color: var(--text-light);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    background-color: #2c2c2c;
+    border-color: var(--purple-dark);
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
