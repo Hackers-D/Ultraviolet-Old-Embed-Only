@@ -1,7 +1,5 @@
 # How to make a Ultraviolet proxy, or connect it with your frontend
 
-This guide covers the setup of Ultraviolet (UV), including creating a new basic frontend or integrating your existing one. If you need assistance, feel free to DM me on Discord @crllect. Huge thanks to @percslol for help with migrating to 3.x.x
-
 ## PREFACE
 
 If anything here should be changed, please feel free to submit a pr or dm me directly. If anything here was at all useful, please consider staring the repo, it helps a ton!
