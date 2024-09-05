@@ -1,3 +1,5 @@
+// I know this wont work but you know what I DONT FUCKING CARE
+
 class ErrorHandler {
     constructor(maxErrors = 10, clearInterval = 60000) {
       this.errors = [];
